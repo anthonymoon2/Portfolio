@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Anthony Moon &#x1F319;</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Akshar&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="styles/home.css">
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="navbar-button-container">
+        <button class="navbar-button" onclick="scrollToProjects()" type="button">Projects</button>
+      </div>
+      <div class="navbar-button-container">
+        <a href="contact.html" target="_blank">
+          <button class="navbar-button" type="button">Contact</button>
+        </a>
+      </div>
+    </div>
+
+    <div class="first-container">
+      <div class="first-container-title">
+        <div class="first-container-symbol">
+          <p>> </p>
+        </div>
+        <div class="first-container-name">
+          <p class="text">Anthony Moon</p>
+        </div>
+      </div>
+      <div class="first-container-description">
+        Hello! I’m a computer science student at Chapman University who enjoys building user-friendly and simple websites, games, and everything in between. <br><br>
+        Check out my 
+        <button class="project-button" onclick="scrollToProjects()" type="button">projects</button> below
+      </div>
+    </div>
+
+    <div class="second-container" id="project-section">
+      <div class="second-container-title">Projects</div>
+      <div class="second-container-row">
+        <div class="project-container">
+
+        </div>
+      </div>
+
+      <div class="second-container-row">
+        <div class="project-container">
+
+        </div>
+      </div>
+
+      <div class="second-container-row">
+        <div class="project-container">
+
+        </div>
+      </div>
+    </div>
+
+    <div class="third-container">
+      <div class="third-container-title">EDUCATION</div>
+      <div class="school-outer">
+        <div class="school-inner" data-tilt>
+          <div class="school-title">SCHOOL</div>
+          <div class="school-name">
+            CHAPMAN UNIVERSITY
+            <img class="chap-img" src="images/chapmanlogo.png">
+          </div>
+          <div class="school-desc">&#x2022; Fowler School of Engineering <br> &#x2022; Argyros College of Business & Economics</div>
+          <hr class="school-line">
+          <div class="study">MAJOR</div>
+          <div class="study-desc">&#x2022; Computer Science</div>
+          <div class="study">MINOR</div>
+          <div class="study-desc">&#x2022; Business Administration</div>
+        </div>
+      </div>
+    </div>
+
+    <hr class="animated-hr">
+
+    <div class="skills-title">SKILLS = &#123;</div>
+
+    <div class="fourth-container" data-tilt>
+      <div class="skills-container">
+        <div class="skills-case">
+          <div class="skills-single-container">
+            <span style="color: #8C8C73;">"PROGRAMMING LANGUAGES"</span>:[ 
+            <div class="skills-single-container-desc">
+              "PYTHON", <br>
+              "JAVA", <br>
+              "JAVASCRIPT", <br>
+              "HTML 5", <br>
+              "CSS 3", <br>
+              "C#", <br>
+              "C++"
+            </div>
+            <div class="skills-single-container-end">],</div>
+          </div>
+          <div class="skills-single-container">
+            <span style="color: #8C8C73;">"WEB FRAMEWORKS"</span>:[ 
+            <div class="skills-single-container-desc">
+              "FLASK" 
+            </div>
+            <div class="skills-single-container-end">],</div>
+          </div>
+        </div>
+
+        <div class="skills-case">
+          <div class="skills-single-container">
+            <span style="color: #8C8C73;">"DEVELOPMENT TOOLS"</span>:[ 
+            <div class="skills-single-container-desc">
+              "VISUAL STUDIO CODE", <br>
+              "DOCKER", <br>
+              "UNITY", <br>
+              "GIT/GITHUB"
+            </div>
+            <div class="skills-single-container-end">],</div>
+          </div>
+          <div class="skills-single-container">
+            <span style="color: #8C8C73;">"DATABASE"</span>:[ 
+            <div class="skills-single-container-desc">
+              "MYSQL", <br>
+              "SQLALCHEMY"
+            </div>
+            <div class="skills-single-container-end">]</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="skills-title">}</div>
+    
+    <div class="footer">
+      <div class="footer-button-container">
+        <a href="https://www.linkedin.com/in/chapmanu-anthonymoon/" target="_blank">
+          <button class="footer-rest-button" type="button">LINKEDIN <img class="arrow-img" src="images/arrow.png"></button>
+        </a>
+      </div>
+      
+      <div class="footer-button-container">
+        <a href="https://github.com/anthonymoon2" target="_blank">
+          <button class="footer-rest-button" type="button">GITHUB <img class="arrow-img" src="images/arrow.png"></button>
+        </a>
+      </div>
+
+      <div class="footer-main-button-container">
+        <a href="contact.html" target="_blank">
+          <button class="footer-main-button" type="button">CONTACT <img class="arrow-main-img" src="images/arrow.png"></button>
+        </a>
+      </div>
+    </div>
+
+    <script>
+      function scrollToProjects() {
+          document.getElementById('project-section').scrollIntoView({
+              behavior: 'smooth'
+          });
+      }
+    </script>  
+    <script src="vanilla-tilt.js"></script>
+  </body>
+</html>
