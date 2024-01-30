@@ -14,6 +14,11 @@
   <body>
     <div class="navbar">
       <div class="navbar-button-container">
+        <button class="navbar-button" onclick="darkmode()" type="button">
+          <img id="moon-icon" class="moon" src="images/moon.png">
+        </button>
+      </div>
+      <div class="navbar-button-container">
         <button class="navbar-button" onclick="scrollToProjects()" type="button">Projects</button>
       </div>
       <div class="navbar-button-container">
@@ -40,22 +45,69 @@
     </div>
 
     <div class="second-container" id="project-section">
-      <div class="second-container-title">Projects</div>
+      <div class="second-container-title">PROJECTS</div>
       <div class="second-container-row">
         <div class="project-container">
-
+          <div class="project-container-left">
+            <img class="project-images"src="images/sbg.png">
+          </div>
+          <div class="project-container-right">
+            <div class="project-container-title">RUBRIK</div>
+            <div class="project-desc">
+              Rubrik is a Learning Management System (LMS). An LMS is a software application or web-based technology used to plan, implement, and assess a specific learning process. It provides instructors with a way to create and deliver content, monitor student participation.
+            </div>
+            <div class="project-buttons-container">
+              <button class="project-button-demo" type="button">Live Demo</button>
+              <a href="https://github.com/anthonymoon2/sbg-website" target="_blank">
+                <button class="project-button-github" type="button">
+                  Source Code
+                  <img class="image-github" src="images/github.png">
+                </button>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
 
       <div class="second-container-row">
         <div class="project-container">
-
+          <div class="project-container-left">
+            <img class="project-images"src="images/sbg.png">
+          </div>
+          <div class="project-container-right">
+            <div class="project-container-title">RUBRIK</div>
+            <div class="project-desc">
+              Rubrik is a Learning Management System (LMS). An LMS is a software application or web-based technology used to plan, implement, and assess a specific learning process. It provides instructors with a way to create and deliver content, monitor student participation.
+            </div>
+            <div class="project-buttons-container">
+              <button class="project-button-demo" type="button">Live Demo</button>
+              <button class="project-button-github" type="button">
+                Source Code
+                <img class="image-github" src="images/github.png">
+              </button>
+            </div>
+          </div>
         </div>
       </div>
 
       <div class="second-container-row">
         <div class="project-container">
-
+          <div class="project-container-left">
+            <img class="project-images"src="images/sbg.png">
+          </div>
+          <div class="project-container-right">
+            <div class="project-container-title">RUBRIK</div>
+            <div class="project-desc">
+              Rubrik is a Learning Management System (LMS). An LMS is a software application or web-based technology used to plan, implement, and assess a specific learning process. It provides instructors with a way to create and deliver content, monitor student participation.
+            </div>
+            <div class="project-buttons-container">
+              <button class="project-button-demo" type="button">Live Demo</button>
+              <button class="project-button-github" type="button">
+                Source Code
+                <img class="image-github" src="images/github.png">
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -154,12 +206,91 @@
     </div>
 
     <script>
+      // change background color of the second container(projects) when scrolled down
+      function updateProjectSectionClass() {
+
+        var element = document.getElementById('project-section');
+        var position = element.getBoundingClientRect();
+        var moonImage = document.getElementById('moon-icon');
+      
+        var isInView = position.top < window.innerHeight - 198 && position.bottom >= 0;
+
+        if (moonImage.src.includes('images/moon.png')) {
+          element.classList.toggle('changeColor', isInView);
+          element.classList.remove('dark-mode-project-container');
+        } else {
+          element.classList.toggle('dark-mode-project-container', isInView);
+          element.classList.remove('changeColor');
+        }
+      }
+
+      window.addEventListener('scroll', function() {
+        updateProjectSectionClass();
+      });
+
+      // onlick changes body background and all needed text colors
+      function darkmode() {
+        // change moon image to bright moon image
+        var moonImage = document.getElementById('moon-icon');
+        if (moonImage.src.includes('images/moon.png')) {
+          moonImage.src = 'images/bright-moon.png';
+        } else {
+          moonImage.src = 'images/moon.png';
+        }
+
+        // change button text color
+        var buttonText = document.querySelectorAll('.navbar-button');
+        buttonText.forEach(function(button) {
+          button.classList.toggle('dark-mode-text');
+        });
+
+        // change body color
+        var body = document.body;
+        body.classList.toggle('dark-mode');
+        
+        // change all text color 
+        var firstDesc = document.querySelector('.first-container-description');
+        firstDesc.classList.toggle('dark-mode-text');
+
+        var skillsTitle = document.querySelectorAll('.skills-title');
+        var skillsOne = document.querySelectorAll('.skills-single-container');  
+        var skillsTwo = document.querySelectorAll('.skills-single-container-desc');
+        var skillsThree = document.querySelectorAll('.skills-single-container-end');
+
+        skillsTitle.forEach(function(element) {
+          element.classList.toggle('dark-mode-text');
+        }); 
+        skillsOne.forEach(function(element) {
+          element.classList.toggle('dark-mode-text');
+        });
+        skillsTwo.forEach(function(element) {
+          element.classList.toggle('dark-mode-text');
+        });
+        skillsThree.forEach(function(element) {
+          element.classList.toggle('dark-mode-text');
+        });
+
+        // change project container background color
+        var projectBackground = document.querySelector('.second-container')
+        projectBackground.classList.toggle('dark-mode-project-container')
+
+        // change project title color
+        var projectContainerTitle = document.querySelector('.second-container-title')
+        projectContainerTitle.classList.toggle('dark-mode-project-title')
+
+        // change education title color
+        var projectContainerTitle = document.querySelector('.third-container-title')
+        projectContainerTitle.classList.toggle('dark-mode-project-title')
+      }
+
+      // onclick scrolls down the to target div @ project section
       function scrollToProjects() {
-          document.getElementById('project-section').scrollIntoView({
-              behavior: 'smooth'
-          });
+        document.getElementById('project-section').scrollIntoView({
+          behavior: 'smooth'
+        });
       }
     </script>  
+
     <script src="vanilla-tilt.js"></script>
   </body>
 </html>

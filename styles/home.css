@@ -1,6 +1,22 @@
 body{
   margin: 0;
   font-family: 'Akshar', sans-serif;
+  transition: background-color 0.5s ease;
+}
+.dark-mode{
+  background-color: #121212;
+}
+.dark-mode-text{
+  color: rgb(178, 175, 175) !important;
+  transition: color 0.5s ease;
+}
+.dark-mode-project-container{
+  background-color: #181818 !important;
+  transition: background-color 0.7s ease;
+}
+.dark-mode-project-title{
+  color: rgb(208, 206, 206) !important;
+  transition: color 0.5s ease;
 }
 
 .navbar{
@@ -23,11 +39,17 @@ body{
   border-style: none;
   cursor: pointer;
 }
+.moon{
+  height: 27px;
+  background-color: rgba(0, 0, 0, 0);
+  border-style: none;
+  padding-top: 6px;
+}
 
 .first-container{
   margin-left: 10%;
   margin-right: 10%;
-  height: 600px;
+  height: 660px;
   padding-top: 80px;
 }
 .first-container-title{
@@ -52,6 +74,11 @@ body{
   animation: 
     typing 1s steps(12),
     cursor .4s step-end infinite alternate; 
+}
+@media (max-width: 565px){
+  .text{
+    font-size: 60px;
+  }
 }
 /* blinking cursor */
 @keyframes cursor {
@@ -80,15 +107,19 @@ body{
 }
 
 .second-container{
-  background-color: #aeae9d;
   height: 1500px;
   padding-top: 50px;
   justify-content: center;
+  transition: background-color 0.75s ease;
+}
+.changeColor{
+  background-color: #8c8c73 !important;
 }
 .second-container-title{
   text-align: center;
-  font-size: 60px;
+  font-size: 40px;
   color: white;
+  margin-bottom: 40px;
 }
 .second-container-row{
   display: flex;
@@ -96,11 +127,79 @@ body{
   margin-bottom: 50px;
 }
 .project-container{
-  background-color: lightgrey;
   height: 400px;
   display: flex;
-  width: 800px;
-  box-shadow: 0px 3px 10px rgb(98, 98, 98);
+  width: 900px;
+}
+.project-container-left{
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.project-container-right{
+  width: 50%;
+  padding: 20px;
+}
+.project-images{
+  height: 310px;
+  /* transform to zoom in to the hovered photo */
+  transition: border-radius 0.3s, transform 0.3s;
+  overflow: hidden; /* keep the image contained within borders */
+}
+.project-images:hover{
+  border-radius: 20px;
+  transform: scale(1.1);
+}
+.project-container-title{
+  padding-top: 30px;
+  text-align: center;
+  font-size: 32px;
+  color: white;
+}
+.project-desc{
+  padding-top: 5px;
+  font-size: 20px;
+  color: #D9d9d9;
+  height: 200px;
+  font-weight: 100;
+}
+.project-buttons-container{
+  display: flex;
+}
+.project-button-demo, .project-button-github{
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 15px;
+  margin-right: 20px;
+  background: none;
+  color: #E6E6E6;
+  cursor: pointer;
+}
+.project-button-demo{
+  border-width: 3px;
+  border-style: solid;
+  padding: 10px;
+  border-color: #E6E6E6;
+  transition: border-color 0.3s, color 0.3s;
+}
+.project-button-demo:hover{
+  border-color: #262626;
+  color: #262626;
+}
+.project-button-github{
+  border-style: none;
+  transition: transform 0.2s ease;
+}
+.project-button-github:hover{
+  transform: scale(1.1);
+}
+.image-github{
+  height: 20px;
+  margin-left: 10px;
 }
 @media (max-width: 975px) {
   .project-container {
@@ -108,14 +207,40 @@ body{
     margin-right: 3%;
   }
 }
+@media (max-width: 883px) {
+  .second-container{
+    height: 2200px;
+  }
+  .project-container{
+    height: 600px;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 60px;
+  }
+  .project-container-left, .project-container-right{
+    width: 90%;
+    box-sizing: border-box;
+  }
+  .project-container-title{
+    padding-top: 0px;
+  }
+  .project-desc{
+    text-align: center;
+    height: 150px;
+  }
+  .project-buttons-container{
+    justify-content: center;
+  }
+}
 
 .third-container{
   height: 670px;
 }
 .third-container-title{
-  margin-top: 40px;
+  margin-top: 100px;
   text-align: center;
-  font-size: 50px;
+  font-size: 40px;
   color: #666666;
   margin-bottom: 30px;
 }
@@ -133,11 +258,11 @@ body{
 .school-title{
   margin-top: 50px;
   padding-left: 30px;
-  font-size: 40px;
+  font-size: 30px;
 }
 .school-name{
   padding-left: 45px;
-  font-size: 30px;
+  font-size: 22px;
   color: #8C8C73;
 }
 .chap-img{
@@ -216,8 +341,6 @@ body{
   margin-top: auto;
   padding: 10px 0;
 }
-
-/* responsive adjustments */
 @media (max-width: 820px) {
   .skills-title{
     padding-left: 3%;
