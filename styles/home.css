@@ -413,8 +413,11 @@ body{
 
 /* Responsive - phone */
 @media (max-width: 500px){
+  .navbar{
+    justify-content: center;
+  }
   .navar-button-container{
-    margin-right: 1px;
+    margin-right: 2px;
   }
 
   .text{
