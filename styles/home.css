@@ -254,7 +254,7 @@ body{
 .school-title{
   margin-top: 50px;
   padding-left: 30px;
-  font-size: 30px;
+  font-size: 25px;
 }
 .school-name{
   padding-left: 45px;
@@ -267,7 +267,7 @@ body{
   margin-left: 8px;
 }
 .school-desc{
-  font-size: 20px;
+  font-size: 18px;
   padding-left: 60px;
   color: #666666;
 }
@@ -280,11 +280,11 @@ body{
   border-width: 1px;
 }
 .study{
-  font-size: 25px;
+  font-size: 22px;
   margin-left: 30px;
 }
 .study-desc{
-  font-size: 20px;
+  font-size: 18px;
   margin-left: 35px;
   color: #666666;
 }
@@ -411,12 +411,21 @@ body{
   transition: transform 0.1s ease;
 }
 
+/* Responsive - phone */
 @media (max-width: 500px){
+  .navbar{
+    justify-content: center;
+  }
+  .navar-button-container{
+    margin-right: 10px;
+  }
+
   .text{
-    font-size: 40px;
+    font-size: 55px;
   }
   .first-container-symbol{
-    font-size: 40px;
+    font-size: 55px;
+    margin-right: 10px;
   }
   .project-desc{
     height: 210px;
@@ -427,4 +436,10 @@ body{
   .project-container{
     margin-bottom: 90px;
   }
+  
+  .school-inner{
+    width: 300px;
+    height: 450px;
+  }
+
 }
