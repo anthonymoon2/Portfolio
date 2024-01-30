@@ -54,6 +54,7 @@ body{
 }
 .first-container-title{
   display: flex;
+  align-items: center;
 }
 .first-container-symbol{
   font-size: 80px;
@@ -74,11 +75,6 @@ body{
   animation: 
     typing 1s steps(12),
     cursor .4s step-end infinite alternate; 
-}
-@media (max-width: 565px){
-  .text{
-    font-size: 60px;
-  }
 }
 /* blinking cursor */
 @keyframes cursor {
@@ -413,4 +409,22 @@ body{
 .arrow-main-img{
   height: 38px;
   transition: transform 0.1s ease;
+}
+
+@media (max-width: 500px){
+  .text{
+    font-size: 40px;
+  }
+  .first-container-symbol{
+    font-size: 40px;
+  }
+  .project-desc{
+    height: 210px;
+  }
+  .second-container{
+    height: 2300px;
+  }
+  .project-container{
+    margin-bottom: 90px;
+  }
 }
