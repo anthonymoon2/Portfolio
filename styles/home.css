@@ -413,11 +413,8 @@ body{
 
 /* Responsive - phone */
 @media (max-width: 500px){
-  .navbar{
-    justify-content: center;
-  }
   .navar-button-container{
-    margin-right: 10px;
+    margin-right: 1px;
   }
 
   .text{
@@ -440,6 +437,10 @@ body{
   .school-inner{
     width: 300px;
     height: 450px;
+  }
+
+  .footer{
+    padding-left: 0px;
   }
 
 }
