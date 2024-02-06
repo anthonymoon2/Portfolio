@@ -11,7 +11,7 @@ body{
   transition: color 0.5s ease;
 }
 .dark-mode-project-container{
-  background-color: #181818 !important;
+  background-color: #222222 !important;
   transition: background-color 0.7s ease;
 }
 .dark-mode-project-title{
