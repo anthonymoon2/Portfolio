@@ -18,6 +18,14 @@ body{
   color: rgb(208, 206, 206) !important;
   transition: color 0.5s ease;
 }
+.dark-mode-skills-text{
+  color: white !important;
+  transition: color 0.5s ease;
+}
+.dark-mode-school{
+  background-color: #e3e0e0 !important;
+  box-shadow: 15px 15px 5px rgb(55, 53, 53) !important;
+}
 
 .navbar{
   padding-top: 20px;
@@ -155,7 +163,7 @@ body{
 }
 .project-desc{
   padding-top: 5px;
-  font-size: 20px;
+  font-size: 17px;
   color: #D9d9d9;
   height: 200px;
   font-weight: 100;
@@ -323,6 +331,12 @@ body{
   color: #8c8c73; 
 }
 
+.skills-container-title .programming-languages,
+.skills-container-title div {
+    display: inline-block; 
+    vertical-align: top; 
+}
+
 .skills-container-desc{
   margin-left: 30px;
 }
@@ -425,4 +439,8 @@ body{
 .project-buttons-container a:hover, 
 .project-buttons-container a:active {
   text-decoration: none; 
+}
+
+button:hover{
+  cursor: pointer;
 }

@@ -1,28 +1,73 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Contact Anthony!</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Contact Anthony</title>
     <link rel="stylesheet" type="text/css" href="styles/contact.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
   </head>
   <body>
-    <h1>---WORK IN PROGRESS---</h1>
-    <div class="header">Contact Anthony</div>
+    <div class="header">
+      <button class="name-button">Anthony Moon</button>
+    </div>
+    <div class="contact-title">
+      Contact Me
+    </div>
     <div class="contact-container">
       <div class="contact-container-left">
-        <div class="name">
-          Name
-          <input class="input-name" type="text">
-        </div>
-        <div class="email">
-          Email
-          <input type="input-email">
-        </div>
+        <input class="input-fields" type="text" placeholder="Name">
+
+        <input class="input-fields" type="input-email" placeholder="Email">
+
         <div class="message">
-          Message
-          <input class="message" type="text">
+          <textarea class="input-fields" placeholder="Message" rows="2"></textarea>
         </div>
-        <input type="submit">
+
+        <button class="submit-button">Send Message</button>
+      </div>
+
+      <div class="contact-container-right">
+        <div class="right-container-desc">
+          Thank you for taking the time to look at my portfolio. <br><br>
+          
+          If you want to email me: anthonymoon2@gmail.com <br>
+          If you want to call me: (949) 413 3700
+        </div>
+        <div class="time-container">
+          <div class="time-title">
+            Anthony's Current Time
+          </div>
+          <div class="time" id="time">Loading time...</div>
+          <div class="time-desc">
+            Time in California (PST)
+          </div>
+        </div>
       </div>
     </div>
+
+    <script>
+      function updateClock() {
+        // Create a new Date object for the current time
+        const now = new Date();
+
+        // Format the time as you prefer, automatically adjusting for the Pacific Time zone
+        const formattedTime = now.toLocaleTimeString('en-US', { timeZone: 'America/Los_Angeles' });
+
+        // Update the #time div with the current time in Pacific Time
+        document.getElementById('time').innerText = formattedTime;
+      }
+
+      // Update the time every second
+      setInterval(updateClock, 1000);
+
+      // Initialize the clock on page load
+      window.onload = updateClock;
+    </script>
+    
   </body>
 </html>

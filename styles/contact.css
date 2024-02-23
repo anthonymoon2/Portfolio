@@ -1,28 +1,128 @@
 body{
   margin: 0;
+  background-color: #f0eee4;
+  font-family: 'Mukta';
 }
 
 .header{
-  background-color: #8c8c73;
-  height: 100px;
-  font-size: 40px;
-  color: white;
+  height: 50px;
+  font-size: 20px;
+  color: black;
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.contact-container{
-  background-color: lightblue;
-  height: 500px;
+.name-button{
+  background-color: transparent;
+  border-style: none;
+  font-size: 15px;
+}
+.name-button:hover{
+  cursor: pointer;
+}
+
+.contact-title{
+  margin-left: 20%;
+  margin-right: 20%;
+  height: 100px;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  padding-top: 50px;
 }
-.contact-container-left{
-  background-color: lightgrey;
-  width: 50%;
+
+.contact-container{
+  height: 400px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-left: 20%;
+  margin-right: 20%;
 }
+
 .contact-container-right{
-  background-color: lightpink;
-  width: 50%;
+  padding: 30px;
+}
+.right-container-desc{
+  font-size: 15px;
+  margin-bottom: 30px;
+}
+
+.time-container{
+  text-align: right;
+}
+.time-title{
+  font-size: 14px;
+  color: lightslategrey;
+}
+
+.time{
+  font-size: 30px;
+}
+
+.time-desc{
+  font-size: 10px;
+  color: lightslategrey;
+  padding-left: 50px;
+}
+
+.contact-container-left{
+  padding: 30px;
+  text-align: center;
+}
+
+.input-fields{
+  height: 30px;
+  width: 97%;
+  margin-bottom: 10px;
+  border-color: black;
+  border-style: solid;
+}
+
+textarea.input-fields {
+  height: 140px; 
+  width: 97%; 
+  resize: none; 
+  overflow: auto; /* scroll for overflow text */
+  border-width: 2px;
+}
+
+textarea::placeholder {
+  vertical-align: top;
+  text-align: left;
+  padding-top: 5px;
+}
+
+.submit-button{
+  background-color: #222222;
+  color: white;
+  border: none;
+  height: 40px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-top: 12px;
+}
+
+.submit-button {
+  background-color: #222222; 
+  transition: background-color 0.5s ease;
+}
+
+.submit-button:hover {
+  background-color: rgb(116, 113, 113); 
+  cursor: pointer;
+}
+
+@media (max-width: 800px) {
+  .contact-container{
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .contact-container{
+    grid-template-columns: 1fr;
+  }
 }
