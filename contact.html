@@ -13,22 +13,30 @@
   </head>
   <body>
     <div class="header">
-      <button class="name-button">Anthony Moon</button>
+      <a href="index.html">
+        <button class="name-button">
+          <img class="leftArrow-image" src="images/leftArrow.png">
+        </button>
+      </a>
     </div>
     <div class="contact-title">
       Contact Me
     </div>
     <div class="contact-container">
       <div class="contact-container-left">
-        <input class="input-fields" type="text" placeholder="Name">
+        <form action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="eeafb7ff-c5e4-414f-9b50-993731280bf2">
 
-        <input class="input-fields" type="input-email" placeholder="Email">
+          <input class="input-fields" type="text" placeholder="Name" name="name" required>
 
-        <div class="message">
-          <textarea class="input-fields" placeholder="Message" rows="2"></textarea>
-        </div>
-
-        <button class="submit-button">Send Message</button>
+          <input class="input-fields" type="input-email" placeholder="Email" name="email" required>
+  
+          <div class="message">
+            <textarea class="input-fields" placeholder="Message" rows="2" name="message" required></textarea>
+          </div>
+  
+          <button type="submit" class="submit-button">Send Message</button>
+        </form>
       </div>
 
       <div class="contact-container-right">
@@ -52,20 +60,13 @@
 
     <script>
       function updateClock() {
-        // Create a new Date object for the current time
         const now = new Date();
-
-        // Format the time as you prefer, automatically adjusting for the Pacific Time zone
         const formattedTime = now.toLocaleTimeString('en-US', { timeZone: 'America/Los_Angeles' });
 
-        // Update the #time div with the current time in Pacific Time
         document.getElementById('time').innerText = formattedTime;
       }
 
-      // Update the time every second
       setInterval(updateClock, 1000);
-
-      // Initialize the clock on page load
       window.onload = updateClock;
     </script>
     
