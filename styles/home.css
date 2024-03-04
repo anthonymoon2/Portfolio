@@ -42,8 +42,8 @@ body{
 }
 .navbar-button{
   background-color: rgba(0, 0, 0, 0);
-  color: #666666;
-  font-size: 22px;
+  color: #2c2c2c;
+  font-size: 20px;
   border-style: none;
   cursor: pointer;
 }
@@ -111,7 +111,7 @@ body{
 }
 
 .second-container{
-  height: 1500px;
+  height: 1900px;
   padding-top: 50px;
   justify-content: center;
   transition: background-color 0.75s ease;
@@ -136,7 +136,7 @@ body{
   width: 900px;
 }
 .project-container-left{
-  width: 50%;
+  width: 45%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -144,16 +144,17 @@ body{
 .project-container-right{
   width: 50%;
   padding: 20px;
+  margin-left: 40px;
 }
 .project-images{
-  height: 310px;
+  height: 280px;
   /* transform to zoom in to the hovered photo */
   transition: border-radius 0.3s, transform 0.3s;
   overflow: hidden; /* keep the image contained within borders */
 }
 .project-images:hover{
-  border-radius: 20px;
-  transform: scale(1.05);
+  border-radius: 10px;
+  transform: scale(1.03);
 }
 .project-container-title{
   padding-top: 30px;
@@ -213,7 +214,7 @@ body{
 }
 @media (max-width: 883px) {
   .second-container{
-    height: 2200px;
+    height: 2850px;
   }
   .project-container{
     height: 600px;
@@ -341,6 +342,12 @@ body{
   margin-left: 30px;
 }
 
+.highlighted-skills{
+  color: rgb(154, 16, 16);
+  font-weight: bold;
+  font-size: 20px;
+}
+
 .last-item:after {
   content: "],";
   display: inline-block;
@@ -393,13 +400,12 @@ body{
   transition: transform 0.1s ease;
 }
 
-/* Responsive - phone */
 @media (max-width: 500px){
   .navbar{
-    justify-content: center;
+    padding-right: 5px;
   }
-  .navar-button-container{
-    margin-right: 2px;
+  .navbar-button-container{
+    margin-right: 5px;
   }
 
   .text{
@@ -413,7 +419,7 @@ body{
     height: 210px;
   }
   .second-container{
-    height: 2300px;
+    height: 3000px;
   }
   .project-container{
     margin-bottom: 90px;
@@ -421,6 +427,10 @@ body{
 
   .footer{
     padding-left: 0px;
+  }
+
+  .skills-grid{
+    row-gap: 60px;
   }
 
 }
