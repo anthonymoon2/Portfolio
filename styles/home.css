@@ -227,6 +227,9 @@ body{
     width: 90%;
     box-sizing: border-box;
   }
+  .project-container-right{
+    margin-left: 0px;
+  }
   .project-container-title{
     padding-top: 0px;
   }
@@ -400,7 +403,7 @@ body{
   transition: transform 0.1s ease;
 }
 
-@media (max-width: 500px){
+@media (max-width: 625px){
   .navbar{
     padding-right: 5px;
   }
