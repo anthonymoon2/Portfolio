@@ -217,7 +217,7 @@ body{
     height: 2850px;
   }
   .project-container{
-    height: 600px;
+    height: 640px;
     flex-direction: column;
     align-items: center;
     width: 100%;
@@ -346,7 +346,7 @@ body{
 }
 
 .highlighted-skills{
-  color: rgb(154, 30, 30);
+  color: rgb(255, 255, 255);
   font-weight: bold;
   font-size: 20px;
 }
