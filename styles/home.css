@@ -148,9 +148,8 @@ body{
 }
 .project-images{
   height: 280px;
-  /* transform to zoom in to the hovered photo */
   transition: border-radius 0.3s, transform 0.3s;
-  overflow: hidden; /* keep the image contained within borders */
+  overflow: hidden;
 }
 .project-images:hover{
   border-radius: 10px;
@@ -221,7 +220,6 @@ body{
     flex-direction: column;
     align-items: center;
     width: 100%;
-    margin-bottom: 60px;
   }
   .project-container-left, .project-container-right{
     width: 90%;
@@ -419,13 +417,13 @@ body{
     margin-right: 10px;
   }
   .project-desc{
-    height: 210px;
+    height: 230px;
   }
   .second-container{
     height: 3000px;
   }
   .project-container{
-    margin-bottom: 90px;
+    margin-bottom: 20px;
   }
 
   .footer{
@@ -456,4 +454,14 @@ body{
 
 button:hover{
   cursor: pointer;
+}
+
+video {
+  width: 100%;
+  height: auto; 
+  transition: border-radius 0.3s, transform 0.3s;
+}
+video:hover{
+  border-radius: 10px;
+  transform: scale(1.03);
 }
