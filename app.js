@@ -15,6 +15,36 @@ function updateProjectSectionClass() {
     }
 }
 
+// change navbar color based on position
+function updateNavbarColor() {
+    var navbar = document.querySelector('.navbar');
+    var isInDarkMode = document.body.classList.contains('dark-mode');
+    var projectSection = document.querySelector('.second-container');
+    var projectTop = projectSection.offsetTop;
+    var scrollPosition = window.scrollY + navbar.offsetHeight;
+    var buttonText = document.querySelectorAll('.navbar-button');
+
+    // Adjust default navbar color based on dark mode
+    if (isInDarkMode) {
+        navbar.style.backgroundColor = '#121212'; // Dark mode
+    } else {
+        navbar.style.backgroundColor = 'white'; // Light mode 
+    }
+
+    if (scrollPosition >= projectTop && scrollPosition <= projectTop + projectSection.offsetHeight) {
+        navbar.style.backgroundColor = isInDarkMode ? '#222222' : '#8c8c73';
+        buttonText.forEach(function(button) {
+            button.classList.add('navbar-button-white-text');
+        });
+    } else {
+        buttonText.forEach(function(button) {
+            button.classList.remove('navbar-button-white-text');
+        });
+    }
+}
+
+document.addEventListener('scroll', updateNavbarColor);
+
 // scroll 
 window.addEventListener('scroll', function() {
 updateProjectSectionClass();
@@ -83,7 +113,11 @@ function darkmode() {
     // change education title color
     var projectContainerTitle = document.querySelector('.third-container-title')
     projectContainerTitle.classList.toggle('dark-mode-project-title')
+
+    updateNavbarColor();
 }
+
+updateNavbarColor();
 
 // onclick scrolls down the to target div @ project section
 function scrollToProjects() {

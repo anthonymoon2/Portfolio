@@ -28,14 +28,18 @@ body{
 }
 
 .navbar{
-  padding-top: 20px;
   padding-right: 20px;
-  height: 50px;
+  height: 60px;
   display: flex;
   justify-content: flex-end;
+  background-color: white;
+  position:fixed;
+  width: 100%;
+  z-index: 1000;
+  transition: background-color 0.3s ease;
 }
 .navbar-button-container{
-  margin-right: 30px;
+  margin-right: 20px;
   display: flex;
   justify-content: center; 
   align-items: center; 
@@ -43,9 +47,12 @@ body{
 .navbar-button{
   background-color: rgba(0, 0, 0, 0);
   color: #2c2c2c;
-  font-size: 20px;
+  font-size: 16px;
   border-style: none;
   cursor: pointer;
+}
+.navbar-button-white-text {
+  color: white !important; 
 }
 .moon{
   height: 27px;
@@ -445,6 +452,10 @@ body{
   .navbar a button {
     width: 100%; 
     justify-content: center; 
+  }
+
+  .school-inner{
+    border-width: 1px;
   }
 }
 
