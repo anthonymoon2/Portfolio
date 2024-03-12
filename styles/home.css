@@ -407,6 +407,7 @@ body{
   }
   .navbar-button-container{
     margin-right: 5px;
+    padding-left: 0px; 
   }
 
   .text{
@@ -434,7 +435,19 @@ body{
     row-gap: 60px;
   }
 
+  .navbar a, .navbar a:visited {
+    padding: 0;
+    margin: 0;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+  }
+  .navbar a button {
+    width: 100%; 
+    justify-content: center; 
+  }
 }
+
 
 .creds{
   color: white;
@@ -457,9 +470,9 @@ button:hover{
 }
 
 video {
-  width: 100%;
-  height: auto; 
+  height: 280px;
   transition: border-radius 0.3s, transform 0.3s;
+  overflow: hidden;
 }
 video:hover{
   border-radius: 10px;
