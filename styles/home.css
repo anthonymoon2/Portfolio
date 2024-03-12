@@ -456,8 +456,11 @@ body{
   font-size: 16px;
 }
 
-
-/* remove underline on project buttons */
+/* remove underline from button */
+.navbar-button-container a, 
+.navbar-button-container a:visited, 
+.navbar-button-container a:hover, 
+.navbar-button-container a:active,
 .project-buttons-container a, 
 .project-buttons-container a:visited, 
 .project-buttons-container a:hover, 
