@@ -29,14 +29,20 @@ body{
 
 .navbar{
   padding-right: 20px;
+  padding-left: 20px;
   height: 60px;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
+  align-items: center;
   background-color: white;
   position:fixed;
   width: 100%;
   z-index: 1000;
   transition: background-color 0.3s ease;
+}
+.navbar-left, .navbar-right {
+  display: flex;
+  align-items: center;
 }
 .navbar-button-container{
   margin-right: 20px;
@@ -44,12 +50,16 @@ body{
   justify-content: center; 
   align-items: center; 
 }
-.navbar-button{
+.navbar-button, .navbar-button-main{
   background-color: rgba(0, 0, 0, 0);
-  color: #2c2c2c;
+  color: black;
   font-size: 16px;
   border-style: none;
   cursor: pointer;
+}
+.navbar-button-main{
+  font-family: "Outfit", sans-serif;
+  font-size: 25px;
 }
 .navbar-button-white-text {
   color: white !important; 
@@ -64,8 +74,8 @@ body{
 .first-container{
   margin-left: 10%;
   margin-right: 10%;
-  height: 660px;
-  padding-top: 80px;
+  height: 680px;
+  padding-top: 170px;
 }
 .first-container-title{
   display: flex;

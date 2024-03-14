@@ -6,7 +6,7 @@ function updateProjectSectionClass() {
 
     var isInView = position.top < window.innerHeight - 198 && position.bottom >= 0;
 
-    if (moonImage.src.includes('images/moon.png')) {
+    if (moonImage.src.includes('images/moon.png') || moonImage.src.includes('moonWhite.png')) {
         element.classList.toggle('changeColor', isInView);
         element.classList.remove('dark-mode-project-container');
     } else {
@@ -23,10 +23,12 @@ function updateNavbarColor() {
     var projectTop = projectSection.offsetTop;
     var scrollPosition = window.scrollY + navbar.offsetHeight;
     var buttonText = document.querySelectorAll('.navbar-button');
+    var moonImage = document.getElementById('moon-icon');
 
     // Adjust default navbar color based on dark mode
     if (isInDarkMode) {
         navbar.style.backgroundColor = '#121212'; // Dark mode
+        moonImage.src = 'images/bright-moon.png';
     } else {
         navbar.style.backgroundColor = 'white'; // Light mode 
     }
@@ -36,10 +38,17 @@ function updateNavbarColor() {
         buttonText.forEach(function(button) {
             button.classList.add('navbar-button-white-text');
         });
+        if (!isInDarkMode) {
+            moonImage.src = 'images/moonWhite.png';
+        }
+
     } else {
         buttonText.forEach(function(button) {
             button.classList.remove('navbar-button-white-text');
         });
+        if (!isInDarkMode) { // Revert moon icon if not in dark mode
+            moonImage.src = 'images/moon.png';
+        }
     }
 }
 
@@ -65,6 +74,8 @@ function darkmode() {
     buttonText.forEach(function(button) {
         button.classList.toggle('dark-mode-text');
     });
+    var mainButtonText = document.querySelector('.navbar-button-main');
+    mainButtonText.classList.toggle('dark-mode-text');
 
     // change body color
     var body = document.body;
@@ -139,3 +150,5 @@ const observer = new IntersectionObserver((entries) => {
 
 const hiddenElements = document.querySelectorAll('.skills-container');
 hiddenElements.forEach((el) => observer.observe(el));
+
+

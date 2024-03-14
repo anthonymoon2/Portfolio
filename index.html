@@ -9,37 +9,50 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Akshar&display=swap" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" type="text/css" href="styles/home.css">
   </head>
   <body>
     <div class="navbar">
-      <div class="navbar-button-container">
-        <button class="navbar-button" onclick="darkmode()" type="button">
-          <img id="moon-icon" class="moon" src="images/moon.png">
-        </button>
+      <div class="navbar-left">
+        <div class="navbar-button-container">
+          <a href="index.html">
+            <button class="navbar-button-main" type="button">anthony moon</button>
+          </a>
+        </div>
       </div>
-      <div class="navbar-button-container">
-        <a href="https://www.linkedin.com/in/chapmanu-anthonymoon/" target="_blank">
-          <button class="navbar-button" type="button">LinkedIn</button>
-        </a>
-      </div>
-      <div class="navbar-button-container">
-        <a href="resume.pdf" download="Anthony Moon Resume.pdf">
-          <button class="navbar-button" type="button">Resume</button>
-        </a>
-      </div>
-      <div class="navbar-button-container">
-        <button class="navbar-button" onclick="scrollToProjects()" type="button">Projects</button>
-      </div>
-      <div class="navbar-button-container">
-        <a href="contact.html" target="_blank">
-          <button class="navbar-button" type="button">Contact</button>
-        </a>
+      <div class="navbar-right">
+        <div class="navbar-button-container">
+          <button class="navbar-button" onclick="darkmode()" type="button">
+            <img id="moon-icon" class="moon" src="images/moon.png">
+          </button>
+        </div>
+        <div class="navbar-button-container">
+          <a href="https://www.linkedin.com/in/chapmanu-anthonymoon/" target="_blank">
+            <button class="navbar-button" type="button">LinkedIn</button>
+          </a>
+        </div>
+        <div class="navbar-button-container">
+          <a href="resume.pdf" download="Anthony Moon Resume.pdf">
+            <button class="navbar-button" type="button">Resume</button>
+          </a>
+        </div>
+        <div class="navbar-button-container">
+          <button class="navbar-button" onclick="scrollToProjects()" type="button">Projects</button>
+        </div>
+        <div class="navbar-button-container">
+          <a href="contact.html" target="_blank">
+            <button class="navbar-button" type="button">Contact</button>
+          </a>
+        </div>
       </div>
     </div>
 
-    <div class="first-container">
+    <div id="first-container" class="first-container">
       <div class="first-container-title">
         <div class="first-container-symbol">
           <p>> </p>
