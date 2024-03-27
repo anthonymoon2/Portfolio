@@ -420,11 +420,38 @@ body{
 
 @media (max-width: 625px){
   .navbar{
-    padding-right: 5px;
+    padding-right: 20px;
+    padding-left: 0px;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    position:fixed;
+    width: 100%;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+  }
+  .navbar-left, .navbar-right {
+    display: flex;
+    align-items: center;
   }
   .navbar-button-container{
-    margin-right: 5px;
-    padding-left: 0px; 
+    margin-right: 10px;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+  }
+  .navbar-button, .navbar-button-main{
+    background-color: rgba(0, 0, 0, 0);
+    color: black;
+    font-size: 10px;
+    border-style: none;
+    cursor: pointer;
+  }
+  .navbar-button-main{
+    font-family: "Outfit", sans-serif;
+    font-size: 25px;
   }
 
   .text{
@@ -451,19 +478,7 @@ body{
   .skills-grid{
     row-gap: 60px;
   }
-
-  .navbar a, .navbar a:visited {
-    padding: 0;
-    margin: 0;
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
-  }
-  .navbar a button {
-    width: 100%; 
-    justify-content: center; 
-  }
-
+  
   .school-inner{
     border-width: 1px;
   }
