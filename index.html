@@ -5,303 +5,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Anthony Moon</title>
-
+    
+    <!-- Links for custom font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Akshar&display=swap" rel="stylesheet">
     
+    <!-- Links for custom font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" type="text/css" href="styles/home.css">
+    <!-- Link to style sheet-->
+    <link rel="stylesheet" href="assets/styles/index.css">
   </head>
+
   <body>
-    <div class="navbar">
-      <div class="navbar-left">
-        <div class="navbar-button-container">
-          <a href="index.html">
-            <button class="navbar-button-main" type="button">anthony moon</button>
-          </a>
-        </div>
-      </div>
-      <div class="navbar-right">
-        <div class="navbar-button-container">
-          <button class="navbar-button" onclick="darkmode()" type="button">
-            <img id="moon-icon" class="moon" src="images/moon.png">
-          </button>
-        </div>
-        <div class="navbar-button-container">
-          <a href="https://www.linkedin.com/in/chapmanu-anthonymoon/" target="_blank">
-            <button class="navbar-button" type="button">LinkedIn</button>
-          </a>
-        </div>
-        <div class="navbar-button-container">
-          <a href="resume.pdf" download="Anthony Moon Resume.pdf">
-            <button class="navbar-button" type="button">Resume</button>
-          </a>
-        </div>
-        <div class="navbar-button-container">
-          <button class="navbar-button" onclick="scrollToProjects()" type="button">Projects</button>
-        </div>
-        <div class="navbar-button-container">
-          <a href="contact.html" target="_blank">
-            <button class="navbar-button" type="button">Contact</button>
-          </a>
-        </div>
-      </div>
-    </div>
+    <!-- Header Nav Bar-->
+    <header>
+      <nav>
+        <a href="index.html"> AM </a>
 
-    <div id="first-container" class="first-container">
-      <div class="first-container-title">
-        <div class="first-container-symbol">
-          <p>> </p>
+        <div class="nav-right">
+          <a href="index.html">About</a>
+          <a href="resume.html">Resume</a>
+          <a href="projects.html">Projects</a>
+          <a href="contact.html"> Contact </a>
         </div>
-        <div class="first-container-name">
-          <p class="text">Anthony Moon</p>
-        </div>
-      </div>
-      <div class="first-container-description">
-        Hello! I’m a computer science student at Chapman University who enjoys building user-friendly and creative websites, games, and everything in between. <br><br>
-        Check out my 
-        <button class="project-button" onclick="scrollToProjects()" type="button">projects</button> below
-      </div>
-    </div>
+      </nav>
+    </header>
 
-    <div class="second-container" id="project-section">
-      <div class="second-container-title">PROJECTS</div>
-      <div class="second-container-row">
-        <div class="project-container">
-          <div class="project-container-left">
-            <img class="project-images"src="images/sbg.png">
-          </div>
-          <div class="project-container-right">
-            <div class="project-container-title">RUBRIK</div>
-            <div class="project-desc">
-              A Learning Management System website that utilizes SQLAlchemy for database management, offering secure user authentication with two different account types, a personalized class homepage, and a personalized profile page. <br><br>
-
-              <span class="highlighted-skills">PYTHON, JAVASCRIPT, HTML5, CSS3, BOOTSTRAP, FLASK
-              </span>
-            </div>
-            <div class="project-buttons-container">
-              <a href="http://172.233.137.123/" target="_blank">
-                <button class="project-button-demo" type="button">Live Demo</button>
-              </a>
-              <a href="https://github.com/anthonymoon2/sbg-website" target="_blank">
-                <button class="project-button-github" type="button">
-                  Source Code
-                  <img class="image-github" src="images/github.png">
-                </button>
-              </a>
-            </div>
-          </div>
-        </div>
+    <!-- front page-->
+    <main>
+      <div class="blinking-name-container">
+        <p class="blinking-name-text">> Anthony Moon</p>
       </div>
 
-      <div class="second-container-row">
-        <div class="project-container">
-          <div class="project-container-left">
-            <video autoplay loop muted playsinline>
-              <source src="images/gameVid.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-          </div>
-          <div class="project-container-right">
-            <div class="project-container-title">CHE'LU ADVENTURES</div>
-            <div class="project-desc">
-              A 2D pixel art game that highlights the vibrant and culturally rich setting of my home, Guam. I designed custom game sprites through Adobe Photoshop to represent architectural landmarks and characters, ensuring visual appeal and authenticity to exhibit the unique characteristics of the island. <br><br>
-              <span class="highlighted-skills">
-                UNITY, C#, ADOBE PHOTOSHOP
-              </span>
-            </div>
-            <div class="project-buttons-container">
-              <a href="https://anthonymoon2.itch.io/chelu-adventures?secret=6F5kR3BCobdP4qrhvB2cfW46d5I" target="_blank">
-                <button class="project-button-demo" type="button">Live Demo</button>
-              </a>
-              <button class="project-button-github" type="button">
-                Source Code
-                <img class="image-github" src="images/github.png">
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
+      <section>
+        <p>
+          Hello! I’m a computer science student at Chapman University who enjoys building user-friendly and creative websites, games, and everything in between. 
+        </p>
 
-      <div class="second-container-row">
-        <div class="project-container">
-          <div class="project-container-left">
-            <video autoplay loop muted playsinline>
-              <source src="images/portfolioVid.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-          </div>
-          <div class="project-container-right">
-            <div class="project-container-title">PORTFOLIO</div>
-            <div class="project-desc">
-              The website you are currently viewing now, my portfolio, which showcases live demonstrations of my projects and access to the source codes. Focused on the front end and layout of the website, using tools such as Figma to ensure a creative and visually appealing portfolio. <br><br>
-
-              <span class="highlighted-skills">
-                HTML5, CSS3, JAVASCRIPT
-              </span>
-            </div>
-            <div class="project-buttons-container">
-              <a href="https://www.anthonymoon.com/" target="_blank">
-                <button class="project-button-demo" type="button">Live Demo</button>
-              </a>
-              <a href="https://github.com/anthonymoon2/Portfolio" target="_blank">
-                <button class="project-button-github" type="button">
-                  Source Code
-                  <img class="image-github" src="images/github.png">
-                </button>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="second-container-row">
-        <div class="project-container">
-          <div class="project-container-left">
-            <img class="project-images"src="images/mario.png">
-          </div>
-          <div class="project-container-right">
-            <div class="project-container-title">Mario Simulator</div>
-            <div class="project-desc">
-              A game simulator in C++ that features a customizable input validation of levels, lives, and probability-based coin and enemy presence for an adaptable simulation environment. Implemented an input validation system, ensuring inputs for levels, lives, and probabilities are within range, enhancing reliability and user experience.
-               <br><br>
-
-              <span class="highlighted-skills">
-                C++
-              </span>
-            </div>
-            <div class="project-buttons-container">
-              <a href="https://github.com/anthonymoon2/Mario-Simulator" target="_blank">
-                <button class="project-button-github" type="button">
-                  Source Code
-                  <img class="image-github" src="images/github.png">
-                </button>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="third-container">
-      <div class="third-container-title">EDUCATION</div>
-      <div class="school-outer">
-        <div class="school-inner" data-tilt>
-          <div class="school-title">SCHOOL</div>
-          <div class="school-name">
-            CHAPMAN UNIVERSITY
-            <img class="chap-img" src="images/chapmanlogo.png">
-          </div>
-          <div class="school-desc">&#x2022; Fowler School of Engineering <br> &#x2022; Argyros College of Business & Economics</div>
-          <hr class="school-line">
-          <div class="study">MAJOR</div>
-          <div class="study-desc">&#x2022; Computer Science</div>
-          <div class="study">MINOR</div>
-          <div class="study-desc">&#x2022; Business Administration</div>
-        </div>
-      </div>
-    </div>
-
-    <hr class="animated-hr">
-
-    <div class="skills-title">"SKILLS" : {</div>
-
-      <div class="skills-grid">
-        <div class="skills-container">
-          <div class="skills-container-title">
-            <span class="programming-languages">"PROGRAMMING LANGUAGES"</span>
-            <div class="skills-container-desc">: &nbsp; [</div>
-          </div>
-          <div class="skills-container-desc">
-            "PYTHON", <br>
-            "JAVA", <br>
-            "JAVASCRIPT", <br>
-            "C#", <br>
-            <span class="last-item">"C++" <br> </span> <br>
-          </div>
-        </div>
-        <div class="skills-container">
-          <div class="skills-container-title">
-            <span class="programming-languages">"FRONTEND TECHNOLOGIES"</span>
-            <div class="skills-container-desc">: &nbsp; [</div>
-          </div>
-          <div class="skills-container-desc">
-            "HTML 5", <br>
-            <span class="last-item">"CSS 3" <br> </span> <br>
-          </div>
-        </div>
-        <div class="skills-container">
-          <div class="skills-container-title">
-            <span class="programming-languages">"WEB FRAMEWORKS"</span>
-            <div class="skills-container-desc">: &nbsp; [</div>
-          </div>
-          <div class="skills-container-desc">
-            <span class="last-item">"FLASK" <br> </span> <br>
-          </div>
-        </div>
-        <div class="skills-container">
-          <div class="skills-container-title">
-            <span class="programming-languages">"DEVELOPMENT TOOLS"</span>
-            <div class="skills-container-desc">: &nbsp; [</div>
-          </div>
-          <div class="skills-container-desc">
-            "VISUAL STUDIO CODE", <br>
-            "DOCKER", <br>
-            "UNITY", <br>
-            <span class="last-item">"GIT/GITHUB" <br> </span> <br>
-          </div>
-        </div>
-        <div class="skills-container">
-          <div class="skills-container-title">
-            <span class="programming-languages">"DATABASE"</span>
-            <div class="skills-container-desc">: &nbsp; [</div>
-          </div>
-          <div class="skills-container-desc">
-            "MYSQL", <br>
-            <span class="last-item">"SQLALCHEMY" <br> </span> <br>
-          </div>
-        </div>
-        <div class="skills-container">
-          <div class="skills-container-title">
-            <span class="programming-languages">"UI/UX Design Tools"</span>
-            <div class="skills-container-desc">: &nbsp; [</div>
-          </div>
-          <div class="skills-container-desc">
-            "FIGMA", <br>
-            <span class="last-item">"PHOTOSHOP" <br> </span> <br>
-          </div>
-        </div>
-      </div>
-  
-      <div class="skills-title">}</div>
-    
-    <div class="footer">
-      <div class="footer-button-container">
-        <a href="https://www.linkedin.com/in/chapmanu-anthonymoon/" target="_blank">
-          <button class="footer-rest-button" type="button">LINKEDIN <img class="arrow-img" src="images/arrow.png"></button>
+        <a href="projects.html">
+          <button class="projects-button">Projects</button>
         </a>
-      </div>
-      
-      <div class="footer-button-container">
-        <a href="https://github.com/anthonymoon2" target="_blank">
-          <button class="footer-rest-button" type="button">GITHUB <img class="arrow-img" src="images/arrow.png"></button>
+        <a href="contact.html">
+          <button class="contact-button">Contact</button>
         </a>
-      </div>
+      </section>
+    </main>
 
-      <div class="footer-main-button-container">
-        <a href="contact.html" target="_blank">
-          <button class="footer-main-button" type="button">CONTACT <img class="arrow-main-img" src="images/arrow.png"></button>
-        </a>
-      </div>
-      <div class="creds">Made in 2024 by Anthony Moon</div>
-    </div>
-
-    <script src="app.js"></script>  
-
-    <script src="vanilla-tilt.js"></script>
+    <footer>
+      <a href="about.html">
+        ABOUT
+        <img src="images/arrow.png">
+      </a>
+      <a href="Resume.html">
+        RESUME
+        <img src="images/arrow.png">
+      </a>
+      <a href="Projects.html">
+        PROJECTS
+        <img src="images/arrow.png">
+      </a>
+      <a href="Contact.html">
+        CONTACT
+        <img src="images/arrow.png">
+      </a>
+    </footer>
   </body>
 </html>
