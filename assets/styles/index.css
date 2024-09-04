@@ -99,6 +99,29 @@ main section{
   from { width: 0}
 }
 
+button{
+  cursor: pointer;
+}
+
+
+/* Tablet */
+@media screen and (max-width: 992px) {
+}
+
+/* Large smartphones */
+@media screen and (max-width: 768px) {
+  main{
+    padding-top: 150px;
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+}
+
+/* Small smartphones */
+@media screen and (max-width: 576px) {
+}
+
+
 .second-container{
   height: 1900px;
   padding-top: 50px;
@@ -358,6 +381,9 @@ main section{
 footer{
   background-color: #8C8C73;
   padding: 2% 2% 1% 2%;
+  display: flex;
+  justify-content: center;
+  column-gap: 20px;
 }
 footer a{
   text-decoration: none;
@@ -375,41 +401,6 @@ footer a:hover img{
 }
 
 @media (max-width: 625px){
-  .navbar{
-    padding-right: 20px;
-    padding-left: 0px;
-    height: 60px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: white;
-    position:fixed;
-    width: 100%;
-    z-index: 1000;
-    transition: background-color 0.3s ease;
-  }
-  .navbar-left, .navbar-right {
-    display: flex;
-    align-items: center;
-  }
-  .navbar-button-container{
-    margin-right: 10px;
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
-  }
-  .navbar-button, .navbar-button-main{
-    background-color: rgba(0, 0, 0, 0);
-    color: black;
-    font-size: 10px;
-    border-style: none;
-    cursor: pointer;
-  }
-  .navbar-button-main{
-    font-family: "Outfit", sans-serif;
-    font-size: 25px;
-  }
-
   .text{
     font-size: 55px;
   }
@@ -425,10 +416,6 @@ footer a:hover img{
   }
   .project-container{
     margin-bottom: 20px;
-  }
-
-  .footer{
-    padding-left: 0px;
   }
 
   .skills-grid{
@@ -451,11 +438,6 @@ footer a:hover img{
 .project-buttons-container a:active {
   text-decoration: none; 
 }
-
-button:hover{
-  cursor: pointer;
-}
-
 video {
   height: 280px;
   transition: border-radius 0.3s, transform 0.3s;
