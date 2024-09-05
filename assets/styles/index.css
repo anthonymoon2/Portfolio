@@ -160,7 +160,7 @@ main section{
 }
 
 .project-container:hover{
-  background-color: #303030;
+  background-color: #363636;
   transition: background-color .3s ease-in;
 }
 
@@ -202,10 +202,6 @@ main section{
   transition: border-radius 0.3s, transform 0.3s;
   overflow: hidden;
 }
-.project-images:hover{
-  border-radius: 10px;
-  transform: scale(1.03);
-}
 .project-container-title{
   padding-top: 30px;
   text-align: center;
@@ -242,8 +238,8 @@ main section{
   transition: border-color 0.3s, color 0.3s;
 }
 .project-button-demo:hover{
-  border-color: #262626;
-  color: #262626;
+  border-color: rgb(90, 177, 239);
+  color: rgb(90, 177, 239);
 }
 .project-button-github{
   border-style: none;
@@ -399,10 +395,6 @@ video {
   height: 280px;
   transition: border-radius 0.3s, transform 0.3s;
   overflow: hidden;
-}
-video:hover{
-  border-radius: 10px;
-  transform: scale(1.03);
 }
 
 
