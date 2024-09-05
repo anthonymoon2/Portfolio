@@ -22,17 +22,23 @@
 
   <body>
     <header>
-        <nav>
-          <a href="index.html"> AM </a>
-  
-          <div class="nav-right">
-            <a href="index.html">About</a>
-            <a href="resume.html">Resume</a>
-            <a href="projects.html">Projects</a>
-            <a href="contact.html"> Contact </a>
-          </div>
-        </nav>
-      </header>
+      <nav>
+        <a href="index.html"> AM </a>
+
+        <div class="nav-right">
+          <a href="index.html">About</a>
+          <a href="resume.html" class="current-nav">Resume</a>
+          <a href="projects.html">Projects</a>
+          <a href="contact.html"> Contact </a>
+        </div>
+      </nav>
+    </header>
+
+    <h1>-RESUME-</h1>
+
+    <a href="resume.pdf" download="Anthony Moon's Resume" class="resume-container">
+      <button class="dark-button">Download</button>
+    </a>
 
     <div class="third-container">
       <div class="third-container-title">EDUCATION</div>
@@ -58,73 +64,103 @@
     <div class="skills-title">"SKILLS" : {</div>
 
     <div class="skills-grid">
+
       <div class="skills-container">
         <div class="skills-container-title">
-          <span class="programming-languages">"PROGRAMMING LANGUAGES"</span>
-          <div class="skills-container-desc">: &nbsp; [</div>
+          <span class="programming-languages">"PROGRAMMING LANGUAGES"</span> : [
         </div>
-        <div class="skills-container-desc">
-          "PYTHON", <br>
-          "JAVA", <br>
-          "JAVASCRIPT", <br>
-          "C#", <br>
-          <span class="last-item">"C++" <br> </span> <br>
+        <pre>
+  "PYTHON", 
+  "JAVA", 
+  "JAVASCRIPT", 
+  "C#", 
+  "C++"
+],
+        </pre>
+      </div>
+
+      <div class="skills-container">
+        <div class="skills-container-title">
+          <span class="programming-languages">"FRONTEND TECHNOLOGIES"</span> : [
         </div>
+        <pre>
+  "HTML 5",
+  "CSS 3"
+],
+        </pre>
+      </div>
+
+      <div class="skills-container">
+        <div class="skills-container-title">
+          <span class="programming-languages">"WEB FRAMEWORKS"</span> : [
+        </div>
+        <pre>
+  "FLASK"
+],
+        </pre>
+
+      </div>
+
+      <div class="skills-container">
+        <div class="skills-container-title">
+          <span class="programming-languages">"DEVELOPMENT TOOLS"</span> : [
+        </div>
+        <pre>
+  "VISUAL STUDIO CODE", 
+  "DOCKER", 
+  "UNITY", 
+  "GIT/GITHUB"
+],
+        </pre>
+      </div>
+
+
+      <div class="skills-container">
+        <div class="skills-container-title">
+          <span class="programming-languages">"DATABASE"</span> : [
+        </div>
+        <pre>
+  "MYSQL", 
+  "SQLALCHEMY"
+],
+        </pre>
       </div>
       <div class="skills-container">
         <div class="skills-container-title">
-          <span class="programming-languages">"FRONTEND TECHNOLOGIES"</span>
-          <div class="skills-container-desc">: &nbsp; [</div>
+          <span class="programming-languages">"UI/UX Design Tools"</span> : [
         </div>
-        <div class="skills-container-desc">
-          "HTML 5", <br>
-          <span class="last-item">"CSS 3" <br> </span> <br>
-        </div>
-      </div>
-      <div class="skills-container">
-        <div class="skills-container-title">
-          <span class="programming-languages">"WEB FRAMEWORKS"</span>
-          <div class="skills-container-desc">: &nbsp; [</div>
-        </div>
-        <div class="skills-container-desc">
-          <span class="last-item">"FLASK" <br> </span> <br>
-        </div>
-      </div>
-      <div class="skills-container">
-        <div class="skills-container-title">
-          <span class="programming-languages">"DEVELOPMENT TOOLS"</span>
-          <div class="skills-container-desc">: &nbsp; [</div>
-        </div>
-        <div class="skills-container-desc">
-          "VISUAL STUDIO CODE", <br>
-          "DOCKER", <br>
-          "UNITY", <br>
-          <span class="last-item">"GIT/GITHUB" <br> </span> <br>
-        </div>
-      </div>
-      <div class="skills-container">
-        <div class="skills-container-title">
-          <span class="programming-languages">"DATABASE"</span>
-          <div class="skills-container-desc">: &nbsp; [</div>
-        </div>
-        <div class="skills-container-desc">
-          "MYSQL", <br>
-          <span class="last-item">"SQLALCHEMY" <br> </span> <br>
-        </div>
-      </div>
-      <div class="skills-container">
-        <div class="skills-container-title">
-          <span class="programming-languages">"UI/UX Design Tools"</span>
-          <div class="skills-container-desc">: &nbsp; [</div>
-        </div>
-        <div class="skills-container-desc">
-          "FIGMA", <br>
-          <span class="last-item">"PHOTOSHOP" <br> </span> <br>
-        </div>
+        <pre>
+  "FIGMA", 
+  "PHOTOSHOP"
+]
+        </pre>
       </div>
     </div>
 
-    <div class="skills-title">}</div>
+    <footer>
+      <section>
+        <a href="index.html">
+          ABOUT
+          <img src="images/arrow.png">
+        </a>
+        <a href="resume.html">
+          RESUME
+          <img src="images/arrow.png">
+        </a>
+        <a href="projects.html">
+          PROJECTS
+          <img src="images/arrow.png">
+        </a>
+        <a href="contact.html">
+          CONTACT
+          <img src="images/arrow.png">
+        </a>
+      </section>
+
+      <div class="footer-cred">
+        Made in 2024 by Anthony Moon
+      </div>
+    </footer>
     
     <script src="vanilla-tilt.js"></script>
   </body>

@@ -1,7 +1,16 @@
+/* ----- SHARED CSS ----- */
 body{
   margin: 0;
   font-family: 'Akshar', sans-serif;
   transition: background-color 0.5s ease;
+}
+
+h1 {
+  text-align: center;
+}
+
+a{
+  text-decoration: none;
 }
 
 header a{
@@ -37,6 +46,64 @@ nav{
   display: flex;
   gap: 20px;
 }
+.current-nav{
+  color: #8c8c73;
+}
+
+button{
+  cursor: pointer;
+}
+
+.dark-button, .light-button{
+  border: none;
+  padding: 1.5% 5%;
+  transition: background-color 0.5s ease;
+  border-radius: 20px;
+}
+.dark-button{
+  background-color: #222222;
+  color: white;
+}
+.light-button{
+  margin-left: 10px;
+}
+.dark-button:hover {
+  background-color: rgb(116, 113, 113); 
+}
+.light-button:hover{
+  background-color: #8c8c73;
+  color:white;
+}
+
+footer{
+  background-color: #5b5b4a;
+}
+footer section{
+  padding: 3% 2% 0% 2%;
+  display: flex;
+  justify-content: center;
+  column-gap: 20px;
+}
+footer a{
+  text-decoration: none;
+  color: white;
+}
+footer img{
+  height: 1em;
+  margin-left: 5px;
+  transition: transform 0.1s ease;
+}
+footer a:hover img{ 
+  transform: scale(2); 
+}
+.footer-cred{
+  text-align: center;
+  color: white;
+  padding: 2% 0%;
+  font-size: 10px;
+}
+
+/* ABOUT CSS */
 
 main{
   padding-top: 150px;
@@ -53,24 +120,6 @@ main p{
 }
 main section{
   margin-left: 10%;
-}
-.projects-button, .contact-button{
-  border: none;
-  padding: 1.5% 5%;
-  transition: background-color 0.5s ease;
-  border-radius: 20px;
-}
-.projects-button{
-  background-color: #222222;
-  color: white;
-  margin-right: 15px;
-}
-.projects-button:hover {
-  background-color: rgb(116, 113, 113); 
-}
-.contact-button:hover{
-  background-color: #8c8c73;
-  color:white;
 }
 
 .blinking-name-container{
@@ -99,28 +148,26 @@ main section{
   from { width: 0}
 }
 
-button{
-  cursor: pointer;
+/* ----- PROJECTS CSS SECTION ----- */
+
+.project-container{
+  background-color: #262626;
+  height: 400px;
+  display: flex;
+  margin: 0% 7%;
+  padding: 2%;
+  transition: background-color .3s ease-out;
 }
 
-
-/* Tablet */
-@media screen and (max-width: 992px) {
+.project-container:hover{
+  background-color: #303030;
+  transition: background-color .3s ease-in;
 }
 
-/* Large smartphones */
-@media screen and (max-width: 768px) {
-  main{
-    padding-top: 150px;
-    margin-left: 0%;
-    margin-right: 0%;
-  }
+.resume-container{
+  display: flex;
+  justify-content: center;
 }
-
-/* Small smartphones */
-@media screen and (max-width: 576px) {
-}
-
 
 .second-container{
   height: 1900px;
@@ -138,11 +185,6 @@ button{
   display: flex;
   justify-content: center;
   margin-bottom: 50px;
-}
-.project-container{
-  height: 400px;
-  display: flex;
-  width: 900px;
 }
 .project-container-left{
   width: 45%;
@@ -213,40 +255,6 @@ button{
 .image-github{
   height: 20px;
   margin-left: 10px;
-}
-@media (max-width: 975px) {
-  .project-container {
-    margin-left: 3%;
-    margin-right: 3%;
-  }
-}
-@media (max-width: 883px) {
-  .second-container{
-    height: 2850px;
-  }
-  .project-container{
-    height: 640px;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-  }
-  .project-container-left, .project-container-right{
-    width: 90%;
-    box-sizing: border-box;
-  }
-  .project-container-right{
-    margin-left: 0px;
-  }
-  .project-container-title{
-    padding-top: 0px;
-  }
-  .project-desc{
-    text-align: center;
-    height: 150px;
-  }
-  .project-buttons-container{
-    justify-content: center;
-  }
 }
 
 .third-container{
@@ -329,27 +337,21 @@ button{
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 42px;
   row-gap: 42px;
-  margin-left: calc(3% + 100px);
-  margin-right: 3%;
 }
 
 .skills-container{
   height: 200px;
   font-size: 21px;
+  text-align: center;
 }
 
 .programming-languages {
   color: #8c8c73; 
 }
 
-.skills-container-title .programming-languages,
-.skills-container-title div {
-    display: inline-block; 
-    vertical-align: top; 
-}
-
-.skills-container-desc{
-  margin-left: 30px;
+pre{
+  font-size: 18px;
+  margin:0;
 }
 
 .highlighted-skills{
@@ -358,46 +360,10 @@ button{
   font-size: 20px;
 }
 
-.last-item:after {
-  content: "],";
-  display: inline-block;
-  margin-left: -27px;
-}
-
-
 @media (max-width: 900px) {
   .skills-grid{
     grid-template-columns: 1fr 1fr;
   }
-}
-
-@media (max-width: 620px) {
-  .skills-grid{
-    margin-left: calc(3% + 40px);
-  }
-}
-
-
-footer{
-  background-color: #8C8C73;
-  padding: 2% 2% 1% 2%;
-  display: flex;
-  justify-content: center;
-  column-gap: 20px;
-}
-footer a{
-  text-decoration: none;
-  display: flex;
-  color: white;
-  margin-bottom: 5px;
-}
-footer img{
-  height: 1em;
-  margin-left: 5px;
-  transition: transform 0.1s ease;
-}
-footer a:hover img{ 
-  transform: scale(2); 
 }
 
 @media (max-width: 625px){
@@ -407,15 +373,6 @@ footer a:hover img{
   .first-container-symbol{
     font-size: 55px;
     margin-right: 10px;
-  }
-  .project-desc{
-    height: 250px;
-  }
-  .second-container{
-    height: 3000px;
-  }
-  .project-container{
-    margin-bottom: 20px;
   }
 
   .skills-grid{
@@ -446,4 +403,70 @@ video {
 video:hover{
   border-radius: 10px;
   transform: scale(1.03);
+}
+
+
+
+
+#skills-section{
+  background-color: lightblue;
+  margin: 3%;
+  font-size: 20px;
+}
+
+/* Tablet */
+@media screen and (max-width: 992px) {
+  .second-container{
+    height: 2850px;
+  }
+  .project-container{
+    height: 600px;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .project-container-left, .project-container-right{
+    width: 90%;
+    box-sizing: border-box;
+  }
+  .project-container-right{
+    margin-left: 0px;
+  }
+  .project-container-title{
+    padding-top: 0px;
+  }
+  .project-desc{
+    text-align: center;
+  }
+  .project-buttons-container{
+    justify-content: center;
+  }
+}
+
+/* Large smartphones */
+@media screen and (max-width: 768px) {
+  main{
+    padding-top: 150px;
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+  .project-desc{
+    text-align: center;
+    height: 170px;
+  }
+  .project-container{
+    height: 600px;
+  }
+}
+
+/* Small smartphones */
+@media screen and (max-width: 576px) {
+  .project-desc{
+    text-align: center;
+    height: 250px;
+  }
+  .project-container{
+    height: 650px;
+    margin-left: 10%;
+  }
 }
