@@ -507,4 +507,8 @@ video {
     height: 650px;
     margin-left: 10%;
   }
+  .sidebar-container{
+    left: 2.5%;
+    bottom: 130px;
+  }
 }
